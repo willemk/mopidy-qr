@@ -3,7 +3,7 @@ Changelog
 *********
 
 
-v0.1.0 (UNRELEASED)
+v0.0.1 (UNRELEASED)
 ========================================
 
 - Initial release.

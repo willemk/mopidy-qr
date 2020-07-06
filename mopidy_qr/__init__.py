@@ -30,20 +30,13 @@ class Extension(ext.Extension):
     def setup(self, registry):
         # You will typically only implement one of the following things
         # in a single extension.
-
         # TODO: Edit or remove entirely
-        from .frontend import FoobarFrontend
-        registry.add("frontend", FoobarFrontend)
+        from .frontend import QR1Frontend
+        registry.add("frontend", QR1Frontend)
+        ##
 
-        # TODO: Edit or remove entirely
-        from .backend import FoobarBackend
-        registry.add("backend", FoobarBackend)
-
-        # TODO: Edit or remove entirely
-        registry.add(
-            "http:static",
-            {
-                "name": self.ext_name,
-                "path": str(pathlib.Path(__file__).parent / "static"),
-            },
-        )
+    def start(self):
+        logger.info("Starting QR " + Extension.version)
+        
+    def stop(self):
+        logger.info("Stopping QR")

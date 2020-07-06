@@ -36,6 +36,11 @@ Mopidy-QR to your Mopidy configuration file::
     [qr]
     # TODO: Add example of extension config
 
+And run the following to add the proper user permissions:
+```
+sudo usermod -a -G video mopidy
+```
+
 
 Project resources
 =================
