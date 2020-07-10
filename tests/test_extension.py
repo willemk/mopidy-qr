@@ -20,6 +20,3 @@ def test_get_config_schema():
     # TODO Test the content of your config schema
     # assert "username" in schema
     # assert "password" in schema
-
-
-# TODO Write more tests
