@@ -14,7 +14,7 @@ Mopidy-QR
     :target: https://codecov.io/gh/willemk/mopidy-qr
     :alt: Test coverage
 
-Mopid extension for adding tracks via a QR code
+Mopid extension for adding tracks via a QR code using the Raspberry Pi Camera
 
 
 Installation
@@ -34,9 +34,13 @@ Before starting Mopidy, you must add configuration for
 Mopidy-QR to your Mopidy configuration file::
 
     [qr]
-    # TODO: Add example of extension config
+    enabled = true
+    queue = false
 
-And run the following to add the proper user permissions:
+Common Issues
+=============
+
+And run the following to add the proper user permissions in case of webcam issue. 
 ```
 sudo usermod -a -G video mopidy
 ```

@@ -22,21 +22,9 @@ class Extension(ext.Extension):
 
     def get_config_schema(self):
         schema = super().get_config_schema()
-        # TODO: Comment in and edit, or remove entirely
-        #schema["username"] = config.String()
-        #schema["password"] = config.Secret()
+        schema["queue"] = config.Boolean()
         return schema
 
     def setup(self, registry):
-        # You will typically only implement one of the following things
-        # in a single extension.
-        # TODO: Edit or remove entirely
-        from .frontend import QR1Frontend
-        registry.add("frontend", QR1Frontend)
-        ##
-
-    def start(self):
-        logger.info("Starting QR " + Extension.version)
-        
-    def stop(self):
-        logger.info("Stopping QR")
+        from .frontend import QRFrontend
+        registry.add("frontend", QRFrontend)

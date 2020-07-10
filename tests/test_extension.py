@@ -9,6 +9,7 @@ def test_get_default_config():
 
     assert "[qr]" in config
     assert "enabled = true" in config
+    assert "queue = true" in config
 
 
 def test_get_config_schema():
