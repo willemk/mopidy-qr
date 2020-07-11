@@ -2,3 +2,5 @@
 .tox
 __pycache__
 pip-wheel-metadata
+build
+dist

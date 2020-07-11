@@ -61,7 +61,6 @@ class QRReaderThread:
 
     def _loop(self):
         logging.debug("Starting QR Reader")
-
         import imutils.video
 
         logger.debug("Import conpleted")
