@@ -1,5 +1,4 @@
 from mopidy_qr import Extension
-from mopidy_qr import frontend as frontend_lib
 
 
 def test_get_default_config():
@@ -17,4 +16,5 @@ def test_get_config_schema():
 
     schema = ext.get_config_schema()
 
-    assert "[qr]" in config
+    assert "enabled" in schema
+    assert "queue" in schema
