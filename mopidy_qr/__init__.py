@@ -27,4 +27,5 @@ class Extension(ext.Extension):
 
     def setup(self, registry):
         from .frontend import QRFrontend
+
         registry.add("frontend", QRFrontend)

@@ -9,7 +9,6 @@ logger = logging.getLogger(__name__)
 
 
 class QRFrontend(pykka.ThreadingActor, core.CoreListener):
-
     def __init__(self, config, core):
         super().__init__()
 
@@ -29,8 +28,8 @@ class QRFrontend(pykka.ThreadingActor, core.CoreListener):
         logging.info("Stopping QR Frontend")
         self.QRReaderThread.stop()
 
-class QRReaderThread:
 
+class QRReaderThread:
     def __init__(self, config, core):
         self.parseConfig(config)
         self.core = core
@@ -81,7 +80,7 @@ class QRReaderThread:
             frame = imutils.resize(frame, width=400)
 
             # find the barcodes in the frame and decode each of the barcodes
-            # List of supported barcodes 
+            # List of supported barcodes
             # https://github.com/NaturalHistoryMuseum/pyzbar/blob/443586145104fbdf52d4da47eaee833286435cc7/pyzbar/wrapper.py#L41
             barcodes = pyzbar.decode(frame, [pyzbar.ZBarSymbol.QRCODE])
 
